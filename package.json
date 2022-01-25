@@ -1,0 +1,19 @@
+{
+  "name": "nodecrudapi1",
+  "version": "1.0.0",
+  "description": "sample crud app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gayathri-jonna/nodecrudapi1.git"
+  },
+  "author": "Gayathri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gayathri-jonna/nodecrudapi1/issues"
+  },
+  "homepage": "https://github.com/Gayathri-jonna/nodecrudapi1#readme"
+}
