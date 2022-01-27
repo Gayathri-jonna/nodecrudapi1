@@ -4,11 +4,25 @@ const express = require('express')
 // Body parser for getting the data through the url
 const bodyParser = require('body-parser')
 
-// Const
-const { request } = require('express')
+const MongoClient = require('mongodb').MongoClient
+
+// Creating app function from the express functional constructor to use it for creating server and apis
+
 const app = express()
 
+// Enabling body parser with urlencoded form data to be true
 app.use(bodyParser.urlencoded({extended:true}))
+
+// Database Connection String
+const connectionString = "mongodb+srv://gayathri:gayathri3mongo@cluster0.p0dgw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+// Connecting the Database
+MongoClient.connect(connectionString,{useUnifiedTopology:true})
+.then(client => { 
+    console.log('connected to database')
+    const db = client.db('star-war-quotes')
+})
+
 
 app.post('/quotes',(req,res) =>{
     res.send(req.body)
